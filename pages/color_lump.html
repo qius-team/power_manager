@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script src="color_lump/js/jquery.min.js"></script>
+		<script src="color_lump/js/skel.min.js"></script>
+		<script src="color_lump/js/util.js"></script>
+		<script src="color_lump/js/respond.min.js"></script>
+		<script src="color_lump/js/pumin.js"></script>
+		<title>能源介质消耗对比</title>
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<link rel="stylesheet" href="color_lump/css/layout.css"/>
+		<style type="text/css">
+		</style>
+		<!--[if lte IE 9]>
+		<link rel="stylesheet" href="color_lump/css/ie9.css"/>
+		<![endif]--><!--[if lte IE 8]>
+		<link rel="stylesheet" href="color_lump/css/ie8.css"/>
+		<![endif]-->
+	</head>
+<body class="landing">
+	<section class="wrapper style1 special">
+		<div class="inner">
+			<section class="split tbody" id="statArea1" style="min-height:28em;"></section>
+			<!--<section class="split tbody" id="statArea2" style="min-height:68em;"></section>-->
+		</div>
+	</section>
+	<!--[if lte IE 8]><![endif]-->
+
+	<script type="text/javascript">
+		$(function(){
+			skel.breakpoints({
+                  xlarge: '(max-width: 1680px)',
+                  large: '(max-width: 1280px)',
+                  medium: '(max-width: 980px)',
+                  small: '(max-width: 736px)',
+                  xsmall: '(max-width: 480px)'
+            });
+            skel.on('-small', function() {
+            	
+	      	});
+	      	skel.on('+medium', function() {
+
+	      	});
+	      	var __ar1 =  [
+	      		{name:'太阳能', percent: '68', color : 'LimeGreen', trend : 'up',param:'a1'},
+	      		{name:'电能', percent: '12', color : 'Orange', trend : 'down',param:'a2'},
+	      		{name:'风能', percent: '7', color : 'Brown', trend : 'up',param:'a3'},
+	      		{name:'柴油', percent: '4', color : 'Purple', trend : 'up',param:'a4'},
+	      		{name:'其他', percent: '9', color : 'DarkGoldenrod', trend : 'down',param:'a5'},
+	      	];
+	      	var __ar2 =  [
+	      		{name:'电能', percent: '48', color : 'Orange', trend : 'down',param:'a2'},
+	      		{name:'水', percent: '38', color : 'DodgerBlue', trend : 'up',param:'a3'},
+	      		{name:'柴油', percent: '5', color : 'Purple', trend : 'up',param:'a4'},
+	      		{name:'其他', percent: '9', color : 'DarkGoldenrod', trend : 'down',param:'a5'},
+	      	];
+	      	//区域统计
+	      	$.PuMin.stat.square('#statArea1', __ar1, "www.baidu.com", '2016-06-20', '2016-06-22');
+	      //$.PuMin.stat.square('#statArea2', __ar2, "building.html?medium_id=", '2016-06-20', '2016-06-22');
+		});
+	</script>
+</body>
+</html>
